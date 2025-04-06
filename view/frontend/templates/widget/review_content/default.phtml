@@ -1,0 +1,48 @@
+<div class="customer-review-widget">
+    <!-- Left side -->
+    <div class="customer-review-widget__left">
+        <div class="customer-review-widget__avatar">
+            <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.9287 15.369C19.4487 15.369 22.3287 12.4357 22.3287 8.80902C22.3287 5.18236 19.4487 2.24902 15.9287 2.24902C12.4087 2.24902 9.5465 5.23569 9.5465 8.84458C9.52873 12.4535 12.3909 15.369 15.9287 15.369ZM15.9287 5.12902C17.9198 5.12902 19.5554 6.80013 19.5554 8.86236C19.5554 10.9246 17.9198 12.5957 15.9287 12.5957C13.9554 12.5957 12.3021 10.9246 12.3021 8.86236C12.2665 6.78236 13.9198 5.12902 15.9287 5.12902ZM25.1732 23.1201C25.1732 20.8446 24.2665 19.1912 22.7376 17.9646C21.2265 16.9512 19.5554 16.2579 17.3332 16.2579H14.5776C12.3732 16.2579 10.6487 16.9335 9.17317 17.9646C7.66206 19.1735 6.73762 20.8268 6.73762 23.1201L6.6665 30.6401C7.03984 30.4268 7.21762 30.2312 7.57317 29.9824C9.08428 28.7557 9.99095 27.1201 9.99095 24.8268L10.0087 23.4046C10.0087 19.689 13.2798 19.1557 14.5598 19.1557H17.3154C18.6309 19.1557 21.8665 19.689 21.8665 23.4046L21.8843 24.8268C21.8843 27.1024 22.7909 28.7557 24.3198 29.9824C24.6576 30.2312 24.8176 30.4446 25.2265 30.6401L25.1732 23.1201Z" fill="#2196f3"></path>
+            </svg>
+        </div>
+        <div class="customer-review-widget__user-info">
+            <div class="customer-review-widget__name-row">
+                <h2 class="customer-review-widget__name"><?= $block->escapeHtml($block->getCustomerName()); ?></h2>
+                <div class="customer-review-widget__flag">
+                    <img src="<?= $block->getFlagUrl(); ?>" alt="<?= $block->getCustomerCountry(); ?>Flag">
+                </div>
+            </div>
+            <div class="customer-review-widget__verified">
+                <span class="customer-review-widget__check-icon">
+                    <svg class="icon" viewBox="0 0 24 24" fill="white">
+                        <path d="M18.2 5.4a1 1 0 0 1 1.6 1.2l-8 12a1 1 0 0 1-1.5.1l-5-5a1 1 0 1 1 1.4-1.4l4.1 4.1 7.4-11Z" fill-rule="nonzero"/>
+                    </svg>
+                </span>
+                <p class="customer-review-widget__verified-text">
+                    Verified Buyer
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="customer-review-widget__right">
+        <div class="customer-review-widget__review-header">
+            <div class="customer-review-widget__stars">
+                <?php
+                    $rating = (int) $block->getRating();
+                    for ($i = 1; $i <= 5; $i++) {
+                        echo $i <= $rating ? '★' : '☆';
+                    }
+                ?>
+            </div>
+            <h2 class="customer-review-widget__title"><?= $block->escapeHtml($block->getReviewTitle()) ?></h2>
+        </div>
+        <div class="customer-review-widget__review-body">
+            <p class="customer-review-widget__review-text">
+                <?= $block->escapeHtml($block->getCustomerReview()) ?>
+            </p>
+        </div>
+    </div>
+</div>

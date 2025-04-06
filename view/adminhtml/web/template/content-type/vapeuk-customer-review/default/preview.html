@@ -1,0 +1,17 @@
+<div class="pagebuilder-content-type pagebuilder-vapeuk-customer-review amblog_widget" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false" css="{'pagebuilder-block-overlay': displayingWidgetPreview()}">
+    <div attr="data.main.attributes" ko-style="data.main.style" css="data.main.css">
+        <div if="displayingWidgetPreview" class="rendered-content vapeuk-customer-review-preview" html="data.main.html"></div>
+        <div ifnot="displayingWidgetPreview" class="amblog-widget-placeholder pagebuilder-empty-preview">
+            <!-- <span class="placeholder-text" if="loading" text="messages.LOADING"></span> -->
+            <span class="placeholder-text" ifnot="loading" text="placeholderText"></span>
+        </div>
+    </div>
+    <div data-role="spinner"
+        class="admin__data-grid-loading-mask"
+        if="loading">
+        <div class="spinner">
+            <span repeat="8"></span>
+        </div>
+    </div>
+    <render args="getOptions().template"></render>
+</div>

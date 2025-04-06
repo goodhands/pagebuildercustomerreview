@@ -1,0 +1,108 @@
+.customer-review-widget {
+    display: flex;
+    gap: 1.5rem;
+    font-family: sans-serif;
+    color: #1e1e2f;
+    align-items: flex-start;
+    margin: 2rem 0;
+  }
+
+  .customer-review-widget__left {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .customer-review-widget__user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .customer-review-widget__name-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .customer-review-widget__name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    color: @vape-dark-blue;
+  }
+
+  .customer-review-widget__flag {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .customer-review-widget__verified {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .customer-review-widget__check-icon {
+    width: 14px;
+    height: 14px;
+    background-color: @vape-dark-blue;
+    border-radius: 50%;
+    display: inline-block;
+    color: white;
+    font-size: 0.65rem;
+    text-align: center;
+    line-height: 14px;
+  }
+
+  .customer-review-widget__verified-text {
+    font-size: 0.75rem;
+    color: #555;
+    margin: 0;
+  }
+
+  .customer-review-widget__right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .customer-review-widget__review-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .customer-review-widget__stars {
+    color: @vape-light-blue;
+    font-size: 1rem;
+  }
+
+  .customer-review-widget__title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    color: @vape-dark-blue;
+  }
+
+  .customer-review-widget__review-body {
+    font-size: 0.95rem;
+    color: @vape-dark-blue;
+  }
+
+  .customer-review-widget__review-text {
+    margin: 0;
+  }
+
+  .customer-review-widget__flag {
+    img {
+        animation: wavey 2s ease-in-out infinite;
+        transform-origin: center;
+    }
+  }
+
+  @keyframes wavey {
+    0%, 100% { transform: skewY(0deg); }
+    50% { transform: skewY(2deg); }
+  }
